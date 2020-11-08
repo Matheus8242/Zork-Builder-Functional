@@ -28,6 +28,7 @@ namespace Zork
                 return true;
             }
 
+
             if (lhs is null || rhs is null)
             {
                 return false;
