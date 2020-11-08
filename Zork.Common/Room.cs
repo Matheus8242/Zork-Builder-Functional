@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Text;
 using System.Linq;
+using Zork.Common;
 
 namespace Zork
 {
