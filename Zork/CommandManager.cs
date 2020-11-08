@@ -8,7 +8,6 @@ namespace Zork
     {
         public CommandManager() => mCommands = new HashSet<Command>();
         public CommandManager(IEnumerable<Command> commands) => mCommands = new HashSet<Command>(commands);
-        
         public CommandContext Parse(string commandString)
         {
             var commandQuery = from command in mCommands

@@ -14,7 +14,6 @@ namespace Zork
             this(name, new string[] { verb }, action)
         {
         }
-
         public Command(string name, IEnumerable<string> verbs, Action<Game, CommandContext> action)
         {
             Name = name;

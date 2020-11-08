@@ -30,7 +30,6 @@ namespace Zork
             World = world;
             Player = player;
         }
-
         public Game() => CommandManager = new CommandManager();
 
         public static void Start(string gameFilename)
