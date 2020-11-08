@@ -2,9 +2,9 @@ C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\bin\
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\bin\Debug\Zork.Builder.WinForms.exe
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\bin\Debug\Zork.Builder.WinForms.pdb
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csprojAssemblyReference.cache
-C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Form1.resources
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Properties.Resources.resources
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.GenerateResource.cache
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.CoreCompileInputs.cache
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.exe
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.pdb
+C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.MainForm.resources

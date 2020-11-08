@@ -1,16 +1,8 @@
 ﻿namespace Zork.Builder.WinForms
 {
-    partial class zorkBuilderForm
+    partial class MainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -30,12 +22,12 @@
         {
             this.SuspendLayout();
             // 
-            // zorkBuilderForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 871);
-            this.Name = "zorkBuilderForm";
+            this.Name = "MainForm";
             this.Text = "Zork Builder";
             this.ResumeLayout(false);
 
