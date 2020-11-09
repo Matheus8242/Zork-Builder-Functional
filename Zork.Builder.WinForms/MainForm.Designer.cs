@@ -28,35 +28,35 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.playerTabPage = new System.Windows.Forms.TabPage();
-            this.deletePlayerButton = new System.Windows.Forms.Button();
-            this.addPlayerButton = new System.Windows.Forms.Button();
-            this.playerListBox = new System.Windows.Forms.ListBox();
-            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.worldBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTabPage = new System.Windows.Forms.TabPage();
-            this.deleteItemButton = new System.Windows.Forms.Button();
-            this.addItemButton = new System.Windows.Forms.Button();
-            this.itemsListBox = new System.Windows.Forms.ListBox();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.roomsTabPage = new System.Windows.Forms.TabPage();
-            this.deleteRoomButton = new System.Windows.Forms.Button();
-            this.addRoomButton = new System.Windows.Forms.Button();
-            this.roomsListBox = new System.Windows.Forms.ListBox();
-            this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerScoreTextBox = new System.Windows.Forms.TextBox();
             this.playerScoreLabel = new System.Windows.Forms.Label();
             this.playerHealthTextBox = new System.Windows.Forms.TextBox();
             this.playerHealthLabel = new System.Windows.Forms.Label();
             this.playerNameTextBox = new System.Windows.Forms.TextBox();
             this.playerNameLabel = new System.Windows.Forms.Label();
+            this.deletePlayerButton = new System.Windows.Forms.Button();
+            this.addPlayerButton = new System.Windows.Forms.Button();
+            this.playerListBox = new System.Windows.Forms.ListBox();
+            this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsTabPage = new System.Windows.Forms.TabPage();
+            this.deleteItemButton = new System.Windows.Forms.Button();
+            this.addItemButton = new System.Windows.Forms.Button();
+            this.itemsListBox = new System.Windows.Forms.ListBox();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.worldBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomsTabPage = new System.Windows.Forms.TabPage();
+            this.deleteRoomButton = new System.Windows.Forms.Button();
+            this.addRoomButton = new System.Windows.Forms.Button();
+            this.roomsListBox = new System.Windows.Forms.ListBox();
+            this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             fileLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playerTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).BeginInit();
             this.itemsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).BeginInit();
             this.roomsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,7 @@
             // 
             // worldViewModelBindingSource
             // 
+            this.worldViewModelBindingSource.DataMember = "GameWorld";
             this.worldViewModelBindingSource.DataSource = typeof(Zork.Builder.WinForms.ViewModels.WorldViewModel);
             // 
             // selectFileButton
@@ -127,6 +128,54 @@
             this.playerTabPage.Text = "Player";
             this.playerTabPage.UseVisualStyleBackColor = true;
             // 
+            // playerScoreTextBox
+            // 
+            this.playerScoreTextBox.Location = new System.Drawing.Point(243, 170);
+            this.playerScoreTextBox.Name = "playerScoreTextBox";
+            this.playerScoreTextBox.Size = new System.Drawing.Size(140, 26);
+            this.playerScoreTextBox.TabIndex = 17;
+            // 
+            // playerScoreLabel
+            // 
+            this.playerScoreLabel.AutoSize = true;
+            this.playerScoreLabel.Location = new System.Drawing.Point(239, 147);
+            this.playerScoreLabel.Name = "playerScoreLabel";
+            this.playerScoreLabel.Size = new System.Drawing.Size(51, 20);
+            this.playerScoreLabel.TabIndex = 16;
+            this.playerScoreLabel.Text = "&Score";
+            // 
+            // playerHealthTextBox
+            // 
+            this.playerHealthTextBox.Location = new System.Drawing.Point(243, 98);
+            this.playerHealthTextBox.Name = "playerHealthTextBox";
+            this.playerHealthTextBox.Size = new System.Drawing.Size(140, 26);
+            this.playerHealthTextBox.TabIndex = 15;
+            // 
+            // playerHealthLabel
+            // 
+            this.playerHealthLabel.AutoSize = true;
+            this.playerHealthLabel.Location = new System.Drawing.Point(239, 75);
+            this.playerHealthLabel.Name = "playerHealthLabel";
+            this.playerHealthLabel.Size = new System.Drawing.Size(56, 20);
+            this.playerHealthLabel.TabIndex = 14;
+            this.playerHealthLabel.Text = "&Health";
+            // 
+            // playerNameTextBox
+            // 
+            this.playerNameTextBox.Location = new System.Drawing.Point(243, 26);
+            this.playerNameTextBox.Name = "playerNameTextBox";
+            this.playerNameTextBox.Size = new System.Drawing.Size(283, 26);
+            this.playerNameTextBox.TabIndex = 13;
+            // 
+            // playerNameLabel
+            // 
+            this.playerNameLabel.AutoSize = true;
+            this.playerNameLabel.Location = new System.Drawing.Point(239, 3);
+            this.playerNameLabel.Name = "playerNameLabel";
+            this.playerNameLabel.Size = new System.Drawing.Size(51, 20);
+            this.playerNameLabel.TabIndex = 12;
+            this.playerNameLabel.Text = "&Name";
+            // 
             // deletePlayerButton
             // 
             this.deletePlayerButton.Location = new System.Drawing.Point(87, 516);
@@ -155,17 +204,12 @@
             this.playerListBox.Name = "playerListBox";
             this.playerListBox.Size = new System.Drawing.Size(233, 504);
             this.playerListBox.TabIndex = 1;
-            this.playerListBox.ValueMember = "Health";
+            this.playerListBox.ValueMember = "Name";
             // 
             // playerBindingSource
             // 
             this.playerBindingSource.DataMember = "Player";
-            this.playerBindingSource.DataSource = this.worldBindingSource;
-            // 
-            // worldBindingSource
-            // 
-            this.worldBindingSource.DataMember = "Gameworld";
-            this.worldBindingSource.DataSource = this.worldViewModelBindingSource;
+            this.playerBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // itemsTabPage
             // 
@@ -215,6 +259,10 @@
             this.itemsBindingSource.DataMember = "Items";
             this.itemsBindingSource.DataSource = this.worldBindingSource;
             // 
+            // worldBindingSource
+            // 
+            this.worldBindingSource.DataSource = this.worldViewModelBindingSource;
+            // 
             // roomsTabPage
             // 
             this.roomsTabPage.Controls.Add(this.deleteRoomButton);
@@ -263,57 +311,6 @@
             this.roomsBindingSource.DataMember = "Rooms";
             this.roomsBindingSource.DataSource = this.worldBindingSource;
             // 
-            // playerScoreTextBox
-            // 
-            this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Score", true));
-            this.playerScoreTextBox.Location = new System.Drawing.Point(243, 170);
-            this.playerScoreTextBox.Name = "playerScoreTextBox";
-            this.playerScoreTextBox.Size = new System.Drawing.Size(140, 26);
-            this.playerScoreTextBox.TabIndex = 17;
-            // 
-            // playerScoreLabel
-            // 
-            this.playerScoreLabel.AutoSize = true;
-            this.playerScoreLabel.Location = new System.Drawing.Point(239, 147);
-            this.playerScoreLabel.Name = "playerScoreLabel";
-            this.playerScoreLabel.Size = new System.Drawing.Size(51, 20);
-            this.playerScoreLabel.TabIndex = 16;
-            this.playerScoreLabel.Text = "&Score";
-            // 
-            // playerHealthTextBox
-            // 
-            this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Health", true));
-            this.playerHealthTextBox.Location = new System.Drawing.Point(243, 98);
-            this.playerHealthTextBox.Name = "playerHealthTextBox";
-            this.playerHealthTextBox.Size = new System.Drawing.Size(140, 26);
-            this.playerHealthTextBox.TabIndex = 15;
-            // 
-            // playerHealthLabel
-            // 
-            this.playerHealthLabel.AutoSize = true;
-            this.playerHealthLabel.Location = new System.Drawing.Point(239, 75);
-            this.playerHealthLabel.Name = "playerHealthLabel";
-            this.playerHealthLabel.Size = new System.Drawing.Size(56, 20);
-            this.playerHealthLabel.TabIndex = 14;
-            this.playerHealthLabel.Text = "&Health";
-            // 
-            // playerNameTextBox
-            // 
-            this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playerBindingSource, "Name", true));
-            this.playerNameTextBox.Location = new System.Drawing.Point(243, 26);
-            this.playerNameTextBox.Name = "playerNameTextBox";
-            this.playerNameTextBox.Size = new System.Drawing.Size(283, 26);
-            this.playerNameTextBox.TabIndex = 13;
-            // 
-            // playerNameLabel
-            // 
-            this.playerNameLabel.AutoSize = true;
-            this.playerNameLabel.Location = new System.Drawing.Point(239, 3);
-            this.playerNameLabel.Name = "playerNameLabel";
-            this.playerNameLabel.Size = new System.Drawing.Size(51, 20);
-            this.playerNameLabel.TabIndex = 12;
-            this.playerNameLabel.Text = "&Name";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -331,9 +328,9 @@
             this.playerTabPage.ResumeLayout(false);
             this.playerTabPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).EndInit();
             this.itemsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).EndInit();
             this.roomsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -354,7 +351,6 @@
         private System.Windows.Forms.Button addPlayerButton;
         private System.Windows.Forms.BindingSource worldViewModelBindingSource;
         private System.Windows.Forms.BindingSource worldBindingSource;
-        private System.Windows.Forms.BindingSource playerBindingSource;
         private System.Windows.Forms.Button deleteItemButton;
         private System.Windows.Forms.Button addItemButton;
         private System.Windows.Forms.ListBox itemsListBox;
@@ -369,6 +365,7 @@
         private System.Windows.Forms.Label playerHealthLabel;
         private System.Windows.Forms.TextBox playerNameTextBox;
         private System.Windows.Forms.Label playerNameLabel;
+        private System.Windows.Forms.BindingSource playerBindingSource;
     }
 }
 
