@@ -3,24 +3,33 @@
         {
             "Name": "Adventurer John",
             "Health": 100,
-            "Score": 0
+            "Score": 0,
+            "Inventory": [
+                "Book",
+                "Lantern"
+            ]
         }
     ],
     "Items": [
         {
-            "Name": "Book"
+            "Name": "Book",
+            "Weight": 10
         },
         {
-            "Name": "Lantern"
+            "Name": "Lantern",
+            "Weight": 20
         },
         {
-            "Name": "Helmet"
+            "Name": "Helmet",
+            "Weight": 15
         },
         {
-            "Name": "Sword"
+            "Name": "Sword",
+            "Weight": 25
         },
         {
-            "Name": "Shield"
+            "Name": "Shield",
+            "Weight": 35
         }
     ],
     "Rooms": [
