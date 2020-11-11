@@ -7,5 +7,8 @@ namespace ZorkBuilder.Data
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public string Name { get; set; }
+        public string Location { get; set; }
+        public string Neighbor { get; set; }
+        public string Rooms { get; set; }
     }
 }

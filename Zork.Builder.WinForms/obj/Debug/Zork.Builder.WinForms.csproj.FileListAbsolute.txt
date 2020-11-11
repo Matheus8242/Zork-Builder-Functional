@@ -15,3 +15,5 @@ C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\bin\
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.csproj.Fody.CopyLocal.cache
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Forms.AddPlayerForm.resources
 C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Forms.MainForm.resources
+C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Forms.AddItemForm.resources
+C:\Users\Matheus Campos\Documents\GitHub\Zork-Builder\Zork.Builder.WinForms\obj\Debug\Zork.Builder.WinForms.Forms.AddRoomForm.resources

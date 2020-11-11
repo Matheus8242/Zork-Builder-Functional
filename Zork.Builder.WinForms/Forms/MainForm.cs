@@ -24,7 +24,6 @@ namespace Zork.Builder.WinForms.Forms
                 }
             } 
         }
-
         private bool IsWorldLoaded 
         { 
             get => mIsWorldLoaded;
@@ -53,17 +52,35 @@ namespace Zork.Builder.WinForms.Forms
                 }
             }
         }
-        private void AddItemButton_Click(object sender, EventArgs e)
+        private void AddItemButton_Click(object sender, System.EventArgs e)
         {
-
+            using (AddItemForm addItemForm = new AddItemForm())
+            {
+                if (addItemForm.ShowDialog() == DialogResult.OK)
+                {
+                    Item item = new Item { Name = addItemForm.ItemName };
+                    ViewModel.Items.Add(item);
+                }
+            }
         }
-        private void DeleteItemButton_Click(object sender, EventArgs e)
+        private void AddRoomButton_Click(object sender, EventArgs e)
         {
-
+            using (AddRoomForm addRoomForm = new AddRoomForm())
+            {
+                if (addRoomForm.ShowDialog() == DialogResult.OK)
+                {
+                    Room room = new Room { Rooms = addRoomForm.RoomName };
+                    ViewModel.Rooms.Add(room);
+                }
+            }
         }
         private void PlayerListBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             deletePlayerButton.Enabled = playerListBox.SelectedItem != null;
+        }
+        private void PlayerInventoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            deleteItemButton.Enabled = playerInventoryListBox.SelectedItem != null;
         }
         private void DeletePlayerButton_Click(object sender, System.EventArgs e)
         {
@@ -73,7 +90,22 @@ namespace Zork.Builder.WinForms.Forms
                 playerListBox.SelectedItem = ViewModel.Players.FirstOrDefault();
             }
         }
-
+        private void DeleteItemButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Delete this item?", AssemblyTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ViewModel.Items.Remove((Item)playerInventoryListBox.SelectedItem);
+                playerInventoryListBox.SelectedItem = ViewModel.Items.FirstOrDefault();
+            }
+        }
+        private void DeleteRoomButton_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Delete this room?", AssemblyTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ViewModel.Rooms.Remove((Room)roomsListBox.SelectedItem);
+                roomsListBox.SelectedItem = ViewModel.Rooms.FirstOrDefault();
+            }
+        }
         #region Main Menu
         private void OpenWorldToolStripMenuItem_Click(object sender, System.EventArgs e)
         {

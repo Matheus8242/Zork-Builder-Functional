@@ -23,9 +23,7 @@
             this.components = new System.ComponentModel.Container();
             this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,11 +36,6 @@
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.roomsTabPage = new System.Windows.Forms.TabPage();
             this.roomsLabel = new System.Windows.Forms.Label();
-            this.neighborsListBox = new System.Windows.Forms.ListBox();
-            this.roomNameTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.roomNameLabel = new System.Windows.Forms.Label();
             this.deleteRoomButton = new System.Windows.Forms.Button();
             this.addRoomButton = new System.Windows.Forms.Button();
             this.roomsListBox = new System.Windows.Forms.ListBox();
@@ -51,6 +44,7 @@
             this.deleteItemButton = new System.Windows.Forms.Button();
             this.addItemButton = new System.Windows.Forms.Button();
             this.playerInventoryListBox = new System.Windows.Forms.ListBox();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerScoreTextBox = new System.Windows.Forms.TextBox();
             this.playerHealthTextBox = new System.Windows.Forms.TextBox();
             this.playerNameTextBox = new System.Windows.Forms.TextBox();
@@ -60,18 +54,17 @@
             this.deletePlayerButton = new System.Windows.Forms.Button();
             this.addPlayerButton = new System.Windows.Forms.Button();
             this.playerListBox = new System.Windows.Forms.ListBox();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTabControl = new System.Windows.Forms.TabControl();
-            this.descriptionListBox = new System.Windows.Forms.ListBox();
-            this.startingRoomLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             this.mainMenuStrip.SuspendLayout();
             this.roomsTabPage.SuspendLayout();
             this.playerTabPage.SuspendLayout();
             this.playerInventoryGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,20 +76,10 @@
             // 
             this.openFileDialog.Filter = "World Files(*json)|*.json";
             // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.playersBindingSource;
-            // 
             // playersBindingSource
             // 
             this.playersBindingSource.DataMember = "Players";
             this.playersBindingSource.DataSource = this.worldViewModelBindingSource;
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // roomsBindingSource
             // 
@@ -105,6 +88,7 @@
             // 
             // mainMenuStrip
             // 
+            this.mainMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -177,14 +161,7 @@
             // 
             // roomsTabPage
             // 
-            this.roomsTabPage.Controls.Add(this.startingRoomLabel);
-            this.roomsTabPage.Controls.Add(this.descriptionListBox);
             this.roomsTabPage.Controls.Add(this.roomsLabel);
-            this.roomsTabPage.Controls.Add(this.neighborsListBox);
-            this.roomsTabPage.Controls.Add(this.roomNameTextBox);
-            this.roomsTabPage.Controls.Add(this.label1);
-            this.roomsTabPage.Controls.Add(this.label2);
-            this.roomsTabPage.Controls.Add(this.roomNameLabel);
             this.roomsTabPage.Controls.Add(this.deleteRoomButton);
             this.roomsTabPage.Controls.Add(this.addRoomButton);
             this.roomsTabPage.Controls.Add(this.roomsListBox);
@@ -199,58 +176,11 @@
             // roomsLabel
             // 
             this.roomsLabel.AutoSize = true;
-            this.roomsLabel.Location = new System.Drawing.Point(6, 163);
+            this.roomsLabel.Location = new System.Drawing.Point(6, 23);
             this.roomsLabel.Name = "roomsLabel";
             this.roomsLabel.Size = new System.Drawing.Size(60, 20);
             this.roomsLabel.TabIndex = 24;
             this.roomsLabel.Text = "&Rooms";
-            // 
-            // neighborsListBox
-            // 
-            this.neighborsListBox.DataSource = this.roomsBindingSource;
-            this.neighborsListBox.DisplayMember = "Name";
-            this.neighborsListBox.FormattingEnabled = true;
-            this.neighborsListBox.ItemHeight = 20;
-            this.neighborsListBox.Location = new System.Drawing.Point(266, 343);
-            this.neighborsListBox.Name = "neighborsListBox";
-            this.neighborsListBox.Size = new System.Drawing.Size(250, 164);
-            this.neighborsListBox.TabIndex = 23;
-            this.neighborsListBox.ValueMember = "Name";
-            // 
-            // roomNameTextBox
-            // 
-            this.roomNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.roomNameTextBox.Location = new System.Drawing.Point(266, 50);
-            this.roomNameTextBox.Name = "roomNameTextBox";
-            this.roomNameTextBox.Size = new System.Drawing.Size(283, 26);
-            this.roomNameTextBox.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 320);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "&Neighbors";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "&Description";
-            // 
-            // roomNameLabel
-            // 
-            this.roomNameLabel.AutoSize = true;
-            this.roomNameLabel.Location = new System.Drawing.Point(262, 27);
-            this.roomNameLabel.Name = "roomNameLabel";
-            this.roomNameLabel.Size = new System.Drawing.Size(51, 20);
-            this.roomNameLabel.TabIndex = 18;
-            this.roomNameLabel.Text = "&Name";
             // 
             // deleteRoomButton
             // 
@@ -260,6 +190,7 @@
             this.deleteRoomButton.TabIndex = 8;
             this.deleteRoomButton.Text = "&Delete";
             this.deleteRoomButton.UseVisualStyleBackColor = true;
+            this.deleteRoomButton.Click += new System.EventHandler(this.DeleteRoomButton_Click);
             // 
             // addRoomButton
             // 
@@ -269,16 +200,18 @@
             this.addRoomButton.TabIndex = 7;
             this.addRoomButton.Text = "&Add...";
             this.addRoomButton.UseVisualStyleBackColor = true;
+            this.addRoomButton.Click += new System.EventHandler(this.AddRoomButton_Click);
             // 
             // roomsListBox
             // 
+            this.roomsListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roomsBindingSource, "Name", true));
             this.roomsListBox.DataSource = this.roomsBindingSource;
             this.roomsListBox.DisplayMember = "Name";
             this.roomsListBox.FormattingEnabled = true;
             this.roomsListBox.ItemHeight = 20;
-            this.roomsListBox.Location = new System.Drawing.Point(6, 186);
+            this.roomsListBox.Location = new System.Drawing.Point(6, 46);
             this.roomsListBox.Name = "roomsListBox";
-            this.roomsListBox.Size = new System.Drawing.Size(250, 324);
+            this.roomsListBox.Size = new System.Drawing.Size(250, 464);
             this.roomsListBox.TabIndex = 6;
             this.roomsListBox.ValueMember = "Name";
             // 
@@ -345,6 +278,12 @@
             this.playerInventoryListBox.Size = new System.Drawing.Size(283, 204);
             this.playerInventoryListBox.TabIndex = 0;
             this.playerInventoryListBox.ValueMember = "Name";
+            this.playerInventoryListBox.SelectedIndexChanged += new System.EventHandler(this.PlayerInventoryListBox_SelectedIndexChanged);
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Items";
+            this.inventoryBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // playerScoreTextBox
             // 
@@ -427,8 +366,13 @@
             this.playerListBox.Name = "playerListBox";
             this.playerListBox.Size = new System.Drawing.Size(233, 504);
             this.playerListBox.TabIndex = 1;
-            this.playerListBox.ValueMember = "Health";
+            this.playerListBox.ValueMember = "Name";
             this.playerListBox.SelectedIndexChanged += new System.EventHandler(this.PlayerListBox_SelectedIndexChanged);
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "Items";
+            this.itemsBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // mainTabControl
             // 
@@ -439,27 +383,6 @@
             this.mainTabControl.SelectedIndex = 0;
             this.mainTabControl.Size = new System.Drawing.Size(847, 624);
             this.mainTabControl.TabIndex = 3;
-            // 
-            // descriptionListBox
-            // 
-            this.descriptionListBox.DataSource = this.roomsBindingSource;
-            this.descriptionListBox.DisplayMember = "Name";
-            this.descriptionListBox.FormattingEnabled = true;
-            this.descriptionListBox.ItemHeight = 20;
-            this.descriptionListBox.Location = new System.Drawing.Point(266, 122);
-            this.descriptionListBox.Name = "descriptionListBox";
-            this.descriptionListBox.Size = new System.Drawing.Size(567, 184);
-            this.descriptionListBox.TabIndex = 25;
-            this.descriptionListBox.ValueMember = "Name";
-            // 
-            // startingRoomLabel
-            // 
-            this.startingRoomLabel.AutoSize = true;
-            this.startingRoomLabel.Location = new System.Drawing.Point(6, 27);
-            this.startingRoomLabel.Name = "startingRoomLabel";
-            this.startingRoomLabel.Size = new System.Drawing.Size(130, 20);
-            this.startingRoomLabel.TabIndex = 26;
-            this.startingRoomLabel.Text = "&Starting Location";
             // 
             // MainForm
             // 
@@ -472,9 +395,7 @@
             this.Name = "MainForm";
             this.Text = "Zork Builder";
             ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
@@ -483,6 +404,8 @@
             this.playerTabPage.ResumeLayout(false);
             this.playerTabPage.PerformLayout();
             this.playerInventoryGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             this.mainTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -493,7 +416,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.BindingSource worldViewModelBindingSource;
         private System.Windows.Forms.BindingSource playersBindingSource;
-        private System.Windows.Forms.BindingSource itemsBindingSource;
         private System.Windows.Forms.BindingSource roomsBindingSource;
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -502,7 +424,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
         private System.Windows.Forms.TabPage roomsTabPage;
         private System.Windows.Forms.Button deleteRoomButton;
         private System.Windows.Forms.Button addRoomButton;
@@ -522,16 +443,11 @@
         private System.Windows.Forms.Button addPlayerButton;
         private System.Windows.Forms.ListBox playerListBox;
         private System.Windows.Forms.TabControl mainTabControl;
-        private System.Windows.Forms.TextBox roomNameTextBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label roomNameLabel;
         private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Label roomsLabel;
-        private System.Windows.Forms.ListBox neighborsListBox;
-        private System.Windows.Forms.ListBox descriptionListBox;
-        private System.Windows.Forms.Label startingRoomLabel;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private System.Windows.Forms.BindingSource itemsBindingSource;
     }
 }
 

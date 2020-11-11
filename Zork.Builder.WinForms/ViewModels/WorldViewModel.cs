@@ -24,11 +24,13 @@ namespace Zork.Builder.WinForms.ViewModels
                     {
                         Players = new BindingList<Player>(mWorld.Player);
                         Items = new BindingList<Item>(mWorld.Items);
+                        Rooms = new BindingList<Room>(mWorld.Rooms);
                     }
                     else
                     {
                         Players = new BindingList<Player>(Array.Empty<Player>());
                         Items = new BindingList<Item>(Array.Empty<Item>());
+                        Rooms = new BindingList<Room>(Array.Empty<Room>());
                     }
                 }
             }

@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace Zork.Builder.WinForms.Forms
 {
-    public partial class AddPlayerForm : Form
+    public partial class AddRoomForm : Form
     {
-        public string PlayerName 
+        public string RoomName
         {
-            get => nameTextBox.Text;
-            set => nameTextBox.Text = value;
+            get => roomTextBox.Text;
+            set => roomTextBox.Text = value;
         }
-        public AddPlayerForm()
+        public AddRoomForm()
         {
             InitializeComponent();
         }
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
-            okButton.Enabled = !string.IsNullOrEmpty(PlayerName);
+            okButton.Enabled = !string.IsNullOrEmpty(RoomName);
         }
     }
 }
