@@ -31,8 +31,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.roomsTabPage = new System.Windows.Forms.TabPage();
             this.roomsLabel = new System.Windows.Forms.Label();
@@ -91,9 +89,7 @@
             this.mainMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mainMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.runToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.fileToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(885, 33);
@@ -141,18 +137,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // runToolStripMenuItem
-            // 
-            this.runToolStripMenuItem.Name = "runToolStripMenuItem";
-            this.runToolStripMenuItem.Size = new System.Drawing.Size(59, 29);
-            this.runToolStripMenuItem.Text = "&Run";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
-            this.helpToolStripMenuItem.Text = "&Help";
             // 
             // saveFileDialog
             // 
@@ -214,6 +198,7 @@
             this.roomsListBox.Size = new System.Drawing.Size(250, 464);
             this.roomsListBox.TabIndex = 6;
             this.roomsListBox.ValueMember = "Name";
+            this.roomsListBox.SelectedIndexChanged += new System.EventHandler(this.RoomsListBox_SelectedIndexChanged);
             // 
             // playerTabPage
             // 
@@ -443,8 +428,6 @@
         private System.Windows.Forms.Button addPlayerButton;
         private System.Windows.Forms.ListBox playerListBox;
         private System.Windows.Forms.TabControl mainTabControl;
-        private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Label roomsLabel;
         private System.Windows.Forms.BindingSource inventoryBindingSource;
         private System.Windows.Forms.BindingSource itemsBindingSource;

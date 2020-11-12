@@ -82,6 +82,10 @@ namespace Zork.Builder.WinForms.Forms
         {
             deleteItemButton.Enabled = playerInventoryListBox.SelectedItem != null;
         }
+        private void RoomsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            deleteRoomButton.Enabled = roomsListBox.SelectedItem != null;
+        }
         private void DeletePlayerButton_Click(object sender, System.EventArgs e)
         {
             if (MessageBox.Show("Delete this player?", AssemblyTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -133,5 +137,7 @@ namespace Zork.Builder.WinForms.Forms
 
         private WorldViewModel mViewModel;
         private bool mIsWorldLoaded;
+
+
     }
 }
