@@ -30,7 +30,6 @@ namespace Zork.Builder.WinForms.Forms
             set 
             {
                 mIsWorldLoaded = value;
-                mainTabControl.Enabled = mIsWorldLoaded;
             } 
         }
 
@@ -63,17 +62,7 @@ namespace Zork.Builder.WinForms.Forms
                 }
             }
         }
-        private void AddRoomButton_Click(object sender, EventArgs e)
-        {
-            using (AddRoomForm addRoomForm = new AddRoomForm())
-            {
-                if (addRoomForm.ShowDialog() == DialogResult.OK)
-                {
-                    Room room = new Room { Rooms = addRoomForm.RoomName };
-                    ViewModel.Rooms.Add(room);
-                }
-            }
-        }
+
         private void PlayerListBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             deletePlayerButton.Enabled = playerListBox.SelectedItem != null;
@@ -81,10 +70,6 @@ namespace Zork.Builder.WinForms.Forms
         private void PlayerInventoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             deleteItemButton.Enabled = playerInventoryListBox.SelectedItem != null;
-        }
-        private void RoomsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            deleteRoomButton.Enabled = roomsListBox.SelectedItem != null;
         }
         private void DeletePlayerButton_Click(object sender, System.EventArgs e)
         {
@@ -102,14 +87,7 @@ namespace Zork.Builder.WinForms.Forms
                 playerInventoryListBox.SelectedItem = ViewModel.Items.FirstOrDefault();
             }
         }
-        private void DeleteRoomButton_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Delete this room?", AssemblyTitle, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                ViewModel.Rooms.Remove((Room)roomsListBox.SelectedItem);
-                roomsListBox.SelectedItem = ViewModel.Rooms.FirstOrDefault();
-            }
-        }
+
         #region Main Menu
         private void OpenWorldToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
@@ -138,6 +116,16 @@ namespace Zork.Builder.WinForms.Forms
         private WorldViewModel mViewModel;
         private bool mIsWorldLoaded;
 
-
+        private void AddRoomButton_Click(object sender, EventArgs e)
+        {
+            using (AddRoomForm addRoomForm = new AddRoomForm())
+            {
+                if (addRoomForm.ShowDialog() == DialogResult.OK)
+                {
+                    Room room = new Room { Rooms = addRoomForm.RoomName };
+                    ViewModel.Rooms.Add(room);
+                }
+            }
+        }
     }
 }
