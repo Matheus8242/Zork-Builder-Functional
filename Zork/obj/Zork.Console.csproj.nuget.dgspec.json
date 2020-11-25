@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork\\Zork.Console.csproj": {}
+    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork\\Zork.Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\Zork.Common.csproj": {
+    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\Zork.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\Zork.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\Zork.Common.csproj",
         "projectName": "Zork.Common",
-        "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\Zork.Common.csproj",
+        "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\Zork.Common.csproj",
         "packagesPath": "C:\\Users\\Matheus Campos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\obj\\",
+        "outputPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matheus Campos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork\\Zork.Console.csproj": {
+    "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork\\Zork.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork\\Zork.Console.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork\\Zork.Console.csproj",
         "projectName": "Zork.Console",
-        "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork\\Zork.Console.csproj",
+        "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork\\Zork.Console.csproj",
         "packagesPath": "C:\\Users\\Matheus Campos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork\\obj\\",
+        "outputPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matheus Campos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +90,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\Zork.Common.csproj": {
-                "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\Zork.Common\\Zork.Common.csproj"
+              "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\Zork.Common.csproj": {
+                "projectPath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\Zork.Common\\Zork.Common.csproj"
               }
             }
           }
