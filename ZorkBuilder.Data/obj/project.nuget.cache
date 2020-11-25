@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ssoSV0nTpMiiLpn8XgJI/dYzaDObt93MhTcc8lt6cxzUjUzj0aU4HncndwcfGkRi8nzxIIiF2J05GsGAmyr/jg==",
+  "dgSpecHash": "lILlMTMGb6w/RUdOcBvZ8SUBj1I1erT+kXbbj4ccNym2ybXz1pc9dd0SGcxl4skGoU0LjgG3mfwEWvKgaXGxtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\Zork-Builder\\ZorkBuilder.Data\\ZorkBuilder.Data.csproj",
+  "projectFilePath": "C:\\Users\\Matheus Campos\\Documents\\GitHub\\ZorkUnity\\ZorkBuilder.Data\\ZorkBuilder.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus Campos\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",
     "C:\\Users\\Matheus Campos\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
